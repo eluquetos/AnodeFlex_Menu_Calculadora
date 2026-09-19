@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#05070b">
+  <meta name="description" content="Menú central para seleccionar y utilizar las calculadoras ANODEFLEX.">
+  <title>ANODEFLEX · Menú de calculadoras</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="menu-view" class="menu-view">
+    <header class="hero">
+      <div class="brand"><span class="brand-mark">A</span><div><strong>ANODEFLEX</strong><small>MENÚ DE CALCULADORAS</small></div></div>
+      <div class="hero-copy"><p class="eyebrow">PROTECCIÓN CATÓDICA · CORRIENTE IMPRESA</p><h1>Seleccione el sistema que necesita analizar.</h1><p>Abra la configuración correspondiente al número de nodos, ramas e inyecciones de su instalación.</p></div>
+      <div class="hero-stats"><div><b>5</b><span>calculadoras</span></div><div><b>2–6</b><span>nodos</span></div><div><b>4–12</b><span>ramas</span></div></div>
+    </header>
+    <section class="catalog" aria-labelledby="catalog-title">
+      <div class="catalog-head"><div><span>OPCIONES DISPONIBLES</span><h2 id="catalog-title">Configuraciones ANODEFLEX</h2></div><p>Los datos guardados permanecen en cada calculadora.</p></div>
+      <div id="app-grid" class="app-grid"></div>
+    </section>
+    <footer><span>ANODEFLEX</span><p>Herramientas de dimensionamiento y regulación eléctrica.</p></footer>
+  </main>
+
+  <section id="viewer" class="viewer" hidden aria-label="Calculadora seleccionada">
+    <header class="viewer-bar">
+      <button id="back-menu" class="back-button" type="button" aria-label="Volver al menú"><span aria-hidden="true">←</span><span>Menú</span></button>
+      <div class="viewer-title"><span id="viewer-kicker">CALCULADORA ANODEFLEX</span><strong id="viewer-name">—</strong></div>
+      <div class="viewer-actions"><button id="reload-app" type="button" title="Recargar calculadora" aria-label="Recargar calculadora">↻</button><a id="open-full" href="#" target="_blank" rel="noopener">Pantalla completa <span aria-hidden="true">↗</span></a></div>
+    </header>
+    <div class="frame-shell"><div id="loading" class="loading"><i></i><span>Abriendo calculadora…</span></div><iframe id="app-frame" title="Calculadora ANODEFLEX" allow="fullscreen"></iframe></div>
+  </section>
+  <script src="app.js"></script>
+</body>
+</html>
