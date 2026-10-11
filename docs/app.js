@@ -7,6 +7,7 @@ const APPS=[
   {id:"ANODEFLEX_5N_10R_1INY_CAL_1X5N",name:"5 nodos · 1 inyección",code:"5N / 10R",nodes:5,branches:10,injections:1,description:"Cadena completa de cinco nodos y diez ramas alimentada desde el nodo 1.",accent:"orange"}
 ];
 const BASE="https://eluquetos.github.io/";
+const APP_REVISION="ajuste-minimo-20261011";
 const $=id=>document.getElementById(id);
 const menu=$("menu-view"),viewer=$("viewer"),frame=$("app-frame"),loading=$("loading");
 
@@ -21,7 +22,7 @@ function renderMenu(){
 }
 
 function getApp(id){return APPS.find(app=>app.id===id)}
-function appUrl(app){return BASE+app.id+"/"}
+function appUrl(app){return BASE+app.id+"/?actualizacion="+APP_REVISION}
 function showMenu({historyMode="push"}={}){
   frame.removeAttribute("src");viewer.hidden=true;menu.hidden=false;document.body.classList.remove("viewing");document.title="ANODEFLEX · Menú de calculadoras";
   if(historyMode==="push")history.pushState({},"",location.pathname);
