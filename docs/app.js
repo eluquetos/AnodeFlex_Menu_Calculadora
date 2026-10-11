@@ -1,9 +1,9 @@
 const APPS=[
-  {id:"AnodeFlex_2_ramas_1iny",name:"2 nodos · 1 inyección",code:"2N / 4R",nodes:2,branches:4,injections:1,description:"Cadena de dos nodos con cuatro ramas. Una fuente para medición y regulación.",accent:"orange"},
-  {id:"AnodeFlex_4_ramas_1iny",name:"4 nodos · 1 inyección",code:"4N / 8R",nodes:4,branches:8,injections:1,description:"Cadena completa de cuatro nodos y ocho ramas alimentada desde el nodo 1.",accent:"blue"},
-  {id:"AnodeFlex_2_2_4_ramas_1iny",name:"2 + 2 nodos · 1 inyección",code:"2+2 / 8R",nodes:4,branches:8,injections:1,description:"Dos grupos independientes en campo y una sola inyección durante la regulación.",accent:"violet"},
-  {id:"AnodeFlex_2_2_4_ramas_2iny",name:"2 + 2 nodos · 2 inyecciones",code:"2+2 / 8R",nodes:4,branches:8,injections:2,description:"Alimentación desde el centro mediante dos fuentes independientes para ambos lados.",accent:"cyan"},
-  {id:"AnodeFlex_3_3_6_ramas_1iny",name:"3 + 3 nodos · 1 inyección",code:"3+3 / 12R",nodes:6,branches:12,injections:1,description:"Doce ramas calibradas en dos grupos de tres nodos y reguladas desde una sola fuente.",accent:"pink"}
+  {id:"ANODEFLEX_2N_4R_1INY_v1.3.0",name:"2 nodos · 1 inyección",code:"2N / 4R",nodes:2,branches:4,injections:1,description:"Cadena de dos nodos con cuatro ramas. Una fuente para medición y regulación.",accent:"orange"},
+  {id:"ANODEFLEX_4N_8R_1INY_CAL_1X4N_v1.1.0",name:"4 nodos · 1 inyección",code:"4N / 8R",nodes:4,branches:8,injections:1,description:"Cadena completa de cuatro nodos y ocho ramas alimentada desde el nodo 1.",accent:"blue"},
+  {id:"ANODEFLEX_4N_8R_1INY_CAL_2X2N_v1.0.1",name:"2 + 2 nodos · 1 inyección",code:"2+2 / 8R",nodes:4,branches:8,injections:1,description:"Dos grupos independientes en campo y una sola inyección durante la regulación.",accent:"violet"},
+  {id:"ANODEFLEX_4N_8R_2INY_CAL_2X2N_v1.0.1",name:"2 + 2 nodos · 2 inyecciones",code:"2+2 / 8R",nodes:4,branches:8,injections:2,description:"Alimentación desde el centro mediante dos fuentes independientes para ambos lados.",accent:"cyan"},
+  {id:"ANODEFLEX_6N_12R_1INY_CAL_2X3N_v1.0.0",name:"3 + 3 nodos · 1 inyección",code:"3+3 / 12R",nodes:6,branches:12,injections:1,description:"Doce ramas calibradas en dos grupos de tres nodos y reguladas desde una sola fuente.",accent:"pink"}
 ];
 const BASE="https://eluquetos.github.io/";
 const $=id=>document.getElementById(id);
