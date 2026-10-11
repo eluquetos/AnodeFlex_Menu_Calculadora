@@ -3,7 +3,8 @@ const APPS=[
   {id:"ANODEFLEX_4N_8R_1INY_CAL_1X4N_v1.1.0",name:"4 nodos · 1 inyección",code:"4N / 8R",nodes:4,branches:8,injections:1,description:"Cadena completa de cuatro nodos y ocho ramas alimentada desde el nodo 1.",accent:"blue"},
   {id:"ANODEFLEX_4N_8R_1INY_CAL_2X2N_v1.0.1",name:"2 + 2 nodos · 1 inyección",code:"2+2 / 8R",nodes:4,branches:8,injections:1,description:"Dos grupos independientes en campo y una sola inyección durante la regulación.",accent:"violet"},
   {id:"ANODEFLEX_4N_8R_2INY_CAL_2X2N_v1.0.1",name:"2 + 2 nodos · 2 inyecciones",code:"2+2 / 8R",nodes:4,branches:8,injections:2,description:"Alimentación desde el centro mediante dos fuentes independientes para ambos lados.",accent:"cyan"},
-  {id:"ANODEFLEX_6N_12R_1INY_CAL_2X3N_v1.0.0",name:"3 + 3 nodos · 1 inyección",code:"3+3 / 12R",nodes:6,branches:12,injections:1,description:"Doce ramas calibradas en dos grupos de tres nodos y reguladas desde una sola fuente.",accent:"pink"}
+  {id:"ANODEFLEX_6N_12R_1INY_CAL_2X3N_v1.0.0",name:"3 + 3 nodos · 1 inyección",code:"3+3 / 12R",nodes:6,branches:12,injections:1,description:"Doce ramas calibradas en dos grupos de tres nodos y reguladas desde una sola fuente.",accent:"pink"},
+  {id:"ANODEFLEX_5N_10R_1INY_CAL_1X5N",name:"5 nodos · 1 inyección",code:"5N / 10R",nodes:5,branches:10,injections:1,description:"Cadena completa de cinco nodos y diez ramas alimentada desde el nodo 1.",accent:"orange"}
 ];
 const BASE="https://eluquetos.github.io/";
 const $=id=>document.getElementById(id);
