@@ -1,10 +1,9 @@
 const APPS=[
-  {id:"ANODEFLEX_2N_4R_1INY_v1.3.0",name:"2 nodos · 1 inyección",code:"2N / 4R",nodes:2,branches:4,injections:1,description:"Cadena de dos nodos con cuatro ramas. Una fuente para medición y regulación.",accent:"orange"},
-  {id:"ANODEFLEX_4N_8R_1INY_CAL_1X4N_v1.1.0",name:"4 nodos · 1 inyección",code:"4N / 8R",nodes:4,branches:8,injections:1,description:"Cadena completa de cuatro nodos y ocho ramas alimentada desde el nodo 1.",accent:"blue"},
-  {id:"ANODEFLEX_4N_8R_1INY_CAL_2X2N_v1.0.1",name:"2 + 2 nodos · 1 inyección",code:"2+2 / 8R",nodes:4,branches:8,injections:1,description:"Dos grupos independientes en campo y una sola inyección durante la regulación.",accent:"violet"},
-  {id:"ANODEFLEX_4N_8R_2INY_CAL_2X2N_v1.0.1",name:"2 + 2 nodos · 2 inyecciones",code:"2+2 / 8R",nodes:4,branches:8,injections:2,description:"Alimentación desde el centro mediante dos fuentes independientes para ambos lados.",accent:"cyan"},
-  {id:"ANODEFLEX_6N_12R_1INY_CAL_2X3N_v1.0.0",name:"3 + 3 nodos · 1 inyección",code:"3+3 / 12R",nodes:6,branches:12,injections:1,description:"Doce ramas calibradas en dos grupos de tres nodos y reguladas desde una sola fuente.",accent:"pink"},
-  {id:"ANODEFLEX_5N_10R_1INY_CAL_1X5N",name:"5 nodos · 1 inyección",code:"5N / 10R",nodes:5,branches:10,injections:1,description:"Cadena completa de cinco nodos y diez ramas alimentada desde el nodo 1.",accent:"orange"}
+  {id:"ANODEFLEX_2N_4R_1INY_v1.3.0",name:"2 nodos · medición 1 + regulación 1",code:"2N / 4R",nodes:2,branches:4,injections:1,description:"Una medición de campo y una inyección para regular las cuatro ramas.",accent:"orange"},
+  {id:"ANODEFLEX_4N_8R_1INY_CAL_1X4_v1.1.0",name:"4 nodos · medición 1 + regulación 1",code:"4N / 8R",nodes:4,branches:8,injections:1,description:"Una medición de campo en cuatro nodos y una inyección para regular las ocho ramas.",accent:"blue"},
+  {id:"ANODEFLEX_4N_8R_2INY_CAL_1X4_v1.0.1",name:"4 nodos · medición 2 + regulación 1",code:"2+2 / 8R",nodes:4,branches:8,injections:2,description:"Dos mediciones de dos nodos cada una y una inyección para regular las ocho ramas.",accent:"violet"},
+  {id:"ANODEFLEX_5N_10R_2INY_CAL_1X5_v1.0.0",name:"5 nodos · medición 2 + regulación 1",code:"3+2 / 10R",nodes:5,branches:10,injections:2,description:"Mediciones de tres y dos nodos, con una inyección para regular las diez ramas.",accent:"cyan"},
+  {id:"ANODEFLEX_6N_12R_2INY_CAL_1X6_v1.0.0",name:"6 nodos · medición 2 + regulación 1",code:"3+3 / 12R",nodes:6,branches:12,injections:2,description:"Dos mediciones de tres nodos cada una y una inyección para regular las doce ramas.",accent:"pink"}
 ];
 const BASE="https://eluquetos.github.io/";
 const APP_REVISION="ajuste-minimo-20261011";
@@ -16,7 +15,7 @@ function renderMenu(){
     <article class="app-card accent-${app.accent}">
       <div class="card-top"><span class="index">${String(index+1).padStart(2,"0")}</span><span class="code">${app.code}</span></div>
       <div><p class="card-label">ANODEFLEX</p><h3>${app.name}</h3><p class="description">${app.description}</p></div>
-      <div class="specs"><span><b>${app.nodes}</b> nodos</span><span><b>${app.branches}</b> ramas</span><span><b>${app.injections}</b> ${app.injections===1?"inyección":"inyecciones"}</span></div>
+      <div class="specs"><span><b>${app.nodes}</b> nodos</span><span><b>${app.branches}</b> ramas</span><span><b>${app.injections}</b> ${app.injections===1?"inyección de medición":"inyecciones de medición"}</span></div>
       <button type="button" data-app="${app.id}">Abrir calculadora <span aria-hidden="true">→</span></button>
     </article>`).join("");
 }
